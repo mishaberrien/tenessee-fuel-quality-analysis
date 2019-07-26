@@ -1,0 +1,25 @@
+COMPLAINTS
+note: all the datasets are the same.
+
+ROUTINE
+Each row is a separate test, but it can be on the same sample.
+- Sample: sample numbers are handmade by inspectors. sample numbers don't matter. it is a key
+unique identifier.
+- Prod: product gasoline, diesel, kerosene, jet fuel, aviation gasoline, etc.
+- datesample: when the sample was collected (the timestamp is not correct but the date is).
+- Grade: premium, regular, mid grade (different grades for diesel and kerosene).
+- datetested: never reports (empty)
+- HSID: empty
+- supplier: This is a unique identifier for the gas distributor (this is not a unique identifier
+for terminals)
+- Gallons: gallons that are in the tank when you went to test it. Anything less than 100 Gallons
+we should think to take out. (we should also take out anything with inches. Inches are not exact.)
+- Facility Name: name of the store.
+- SiteAddress: address of the store
+- Test: type of test
+- units: the units that the test is reported in.
+- Method: the method that is used to run the test. ASTM methods.
+- Result (result of the test): this is the data. ND means not determined.
+- minresult: the minimum specification that it can be
+- maxresult: the maximum specification that it can be
+- compliance:  Did it pass the test.
