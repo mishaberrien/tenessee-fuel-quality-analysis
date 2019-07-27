@@ -20,5 +20,6 @@ def concatenate_and_save_intermediate_files(file_name_pattern, new_csv_name):
     CSV - new concatenated CSV is saved to 02_intermediate folder
 
     """
+    
     df = pd.concat([pd.read_csv(f, skiprows = 2) for f in glob.glob('../data/01_raw/{}.csv'.format(file_name_pattern))])
     return df.to_csv('../data/02_intermediate/{}.csv'.format(new_csv_name), index=False)
