@@ -11,9 +11,59 @@
 3. Vapor-Liquid Ratio
 
 ###########################################
-##  ALL TESTS WITH Y/N COMPLIANCE INFO   ##
-## In order of prevalence in the dataset ##
+## Gas Station Tests w. Compliance (Y/N) ##
 ###########################################
+
+0	Distillation 90%
+1	Workmanship
+2	Motor Octane Number
+3	Distillation Residue
+4	Distillation E.P.
+5	Driveability Index
+6	Distillation 10%
+7	Distillation 50%
+8	Vapor Pressure
+9	Vapor-Liquid Ratio
+10	Antiknock Index
+11	Phase Separation
+12	Ethanol
+13	Cetane Index
+14	Sulfur
+15	Water & Sediment
+16	Biodiesel Content
+17	Flash Point
+18	Lubricity
+19	Total Oxygen
+20	Enter a Product and Grade
+21	Cloud Point
+22	LTFT
+23	Acid Number
+24	Oxidation Stability
+25	Distillation 60%
+26	Distillation 80%
+27	Distillation 5%
+28	Distillation Loss
+29	Water - KF Titration
+30	Distillation 70%
+31	Distillation 95%
+32	Research Octane Number
+33	Relative Density
+34	Distillation 20%
+35	Particle Count - ISO Code 3
+36	KF Titration
+37	Methanol
+38	Distillation 40%
+39	Distillation IBP
+40	Haze Rating
+41	Water
+42	Water, KF Titration
+43	API Gravity
+44	Distillation Recovery
+
+###############################################
+##  ALL Fuel TESTS WITH Y/N COMPLIANCE INFO  ##
+#### In order of prevalence in the dataset ####
+###############################################
 
 0	Distillation 90%
 1	Workmanship
