@@ -3,7 +3,8 @@
 ################################
 
 - Sample: This is a unique identifier for each fuel sample.
-- Prod: The product being tested. This variable contains 8 possible values (listed in order of prevalence in the dataset):
+- Prod: The product being tested. This variable contains 8 possible values
+  (listed in order of prevalence in the dataset):
     1. Gasoline
     2. Diesel
     3. Kerosene
@@ -12,8 +13,10 @@
     6. Aviation Gasoline
     7. Fuel Oils
     8. Denat. Fuel EtOH
-- datesample: Date that the sample was collected (note: the timestamp is not correct, but the date is)
-- Grade: Fuel Grade. This dataset contains 14 possible fuel grades (listed in order of prevalence in the dataset):
+- datesample: Date that the sample was collected (note: the timestamp is not
+  correct, but the date is)
+- Grade: Fuel Grade. This dataset contains 14 possible fuel grades (listed in
+  order of prevalence in the dataset):
     1. Regular Unleaded
     2. No. 2D S15
     3. Premium Unleaded
@@ -30,9 +33,10 @@
     14. E100
 - datetested: Note - This column is empty because it is never reported
 - HSID: Note: column is empty
-- supplier: This is a unique identifier for the gas distributor/ supplier (this is not an identifier for the terminals)
-- Gallons: The number of gallons of fuel that were in the tank when tested. Note - in earlier dataset the amount of gas is
-  reported in inches.
+- supplier: This is a unique identifier for the gas distributor/ supplier (this
+  is not an identifier for the terminals)
+- Gallons: The number of gallons of fuel that were in the tank when tested.
+  Note - in earlier dataset the amount of gas is reported in inches.
 - Facility Name: Name of the store.
 - SiteAddress: Address of the store.
 - Test: Type of test (there are 92 different types of tests in the dataset)
@@ -40,8 +44,8 @@
 - Method: the method that is used to run the test. ASTM methods.
 - Result (result of the test): this is the data. ND means not determined.
 - minresult: the minimum specification for the fuel to pass the test.
-- maxresult: the maximum specification for the fuel to pass the test (if there is a min and a max the
-  test number must be within the range)
+- maxresult: the maximum specification for the fuel to pass the test (if there
+  is a min and a max the test number must be within the range)
 - compliance:  Did it pass the test.
 
 
@@ -49,8 +53,10 @@
 # NOTES ON THE DATASET #
 ########################
 
-Note: a number of tests are run on each sample. This means that each sample has more than one row associated with it.
-- Need to figure out which tests have a min and max result (the min and max result will be different depending no the season)
+Note: a number of tests are run on each sample. This means that each sample has
+      more than one row associated with it.
+- Need to figure out which tests have a min and max result (the min and max
+  result will be different depending no the season)
 
 ##############
 # QUESTIONS #
