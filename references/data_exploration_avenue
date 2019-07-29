@@ -1,20 +1,22 @@
 POSSIBLE QUESTIONS OF THE DATASET:
 
 Randy thinks here is a correlation between complaints that pass and those volatility
-properties. He thinks that we get complaints on those things that are good, but are
-just boarderline good.
+properties. He thinks that we get complaints on those things that are 
+just boarder-line good.
 
 starting on page 14 of the Standard Specification for Automotive Spark-Ignition
 Engine Fuel paper (volatility, vapor pressure, etc.)
 
-- The different fuel specs change with season (the fuel specs change every two months).
+Logistic Regression: 
+- Understand if any of the variables we have can predict failure of any of the three tests of interest (location, time of year, etc.) 
 
-- would regression work on this project? Kate sees this as a t-test problem.
 
+Season: 
 - predict seasons of failures and/ or complaints (do you get more complaints in a certain season?)
 
+Chart Ideas: 
 - chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where
 it's allowed (where it passes the test))
 
 - I think it might be interesting to look at violin plots comparing seasonality for the gas grades. Diesel vs. Gasoline
-- 
+
