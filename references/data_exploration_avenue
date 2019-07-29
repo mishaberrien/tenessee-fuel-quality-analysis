@@ -9,4 +9,12 @@ Engine Fuel paper (volatility, vapor pressure, etc.)
 
 - The different fuel specs change with season (the fuel specs change every two months).
 
-- would regression work on this project? Kate sees this as a t-test problem. 
+- would regression work on this project? Kate sees this as a t-test problem.
+
+- predict seasons of failures and/ or complaints (do you get more complaints in a certain season?)
+
+- chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where
+it's allowed (where it passes the test))
+
+- I think it might be interesting to look at violin plots comparing seasonality fo the gas grades. Diesel vs. Gasoline
+- 
