@@ -1,23 +1,26 @@
 POSSIBLE QUESTIONS OF THE DATASET:
 
 Randy thinks here is a correlation between complaints that pass and those volatility
-properties. He thinks that we get complaints on those things that are 
+properties. He thinks that we get complaints on those things that are
 just boarder-line good.
 
 starting on page 14 of the Standard Specification for Automotive Spark-Ignition
 Engine Fuel paper (volatility, vapor pressure, etc.)
 
-Logistic Regression: 
-- Understand if any of the variables we have can predict failure of any of the three tests of interest (location, time of year, etc.) 
-- Can we predict complaints by looking at vapor pressure. In this scenario, we would need to bin the vapor pressure and find a range that is just barely above passing. We would then filter the data (we only want to look at complaints where the gas station passed)
+Logistic Regression:
+- Understand if any of the variables we have can predict failure of any of the three
+tests of interest (location, time of year, etc.)
+- Can we predict complaint outcomes by looking at vapor pressure. In this scenario,
+we would need to bin the vapor pressure and find a range that is just barely
+above passing. We would then filter the data (we only want to look at complaints
+where the gas station passed)
 
 
-Season: 
+Time Series: 
 - predict seasons of failures and/ or complaints (do you get more complaints in a certain season?)
 
-Chart Ideas: 
+Chart Ideas:
 - chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where
 it's allowed (where it passes the test))
 
 - I think it might be interesting to look at violin plots comparing seasonality for the gas grades. Diesel vs. Gasoline
-
