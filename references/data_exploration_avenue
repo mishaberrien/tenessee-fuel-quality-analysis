@@ -16,5 +16,5 @@ Engine Fuel paper (volatility, vapor pressure, etc.)
 - chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where
 it's allowed (where it passes the test))
 
-- I think it might be interesting to look at violin plots comparing seasonality fo the gas grades. Diesel vs. Gasoline
+- I think it might be interesting to look at violin plots comparing seasonality for the gas grades. Diesel vs. Gasoline
 - 
