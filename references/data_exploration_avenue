@@ -16,8 +16,13 @@ above passing. We would then filter the data (we only want to look at complaints
 where the gas station passed)
 
 
-Time Series: 
+Time Series:
 - predict seasons of failures and/ or complaints (do you get more complaints in a certain season?)
+
+Linear Regression:
+- see if you can find a connection between relative density and flashpoint
+
+---
 
 Chart Ideas:
 - chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where
