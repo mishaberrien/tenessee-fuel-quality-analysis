@@ -10,6 +10,7 @@ Engine Fuel paper (volatility, vapor pressure, etc.)
 Logistic Regression:
 - Understand if any of the variables we have can predict failure of any of the three
 tests of interest (location, time of year, etc.)
+
 - Can we predict complaint outcomes by looking at vapor pressure. In this scenario,
 we would need to bin the vapor pressure and find a range that is just barely
 above passing. We would then filter the data (we only want to look at complaints
@@ -25,7 +26,6 @@ Linear Regression:
 ---
 
 Chart Ideas:
-- chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where
-it's allowed (where it passes the test))
+- chart of distribution for test results for the main volatility tests that we are looking at (want to put lines where it's allowed (where it passes the test))
 
 - I think it might be interesting to look at violin plots comparing seasonality for the gas grades. Diesel vs. Gasoline
