@@ -26,7 +26,7 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     volitility_df = volitility_df.merge(ASTM_df, how='left', on='Date')
 
     # Save to csv
-    volitility_df.to_csv('../../data/03_processed/volatility_gas_ASTM.csv')
+    volitility_df.to_csv('../../data/03_processed/volatility_gas_ASTM_function.csv')
 
     return volatility_df
 
