@@ -1,3 +1,5 @@
+import pandas as pd
+
 def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     """Takes in the original csvs including the path names as strings for the results and ASTM standards. Saves the final df as volatility_gas_ASTM.csv in the processed data folder.
 
@@ -27,6 +29,7 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     volitility_df.to_csv('../../data/03_processed/volatility_gas_ASTM.csv')
 
     return volatility_df
+
 
 def date_results_df_creator(df, test_name):
     """Takes in the file path of the large combined gasoline and ASTM standards dataframe. It makes the dateStamp in datetime form and on the index. Also takes the test of the specific test to be made into a df
