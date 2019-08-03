@@ -11,19 +11,24 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     # Makes the routine data frame to only gasoline and the desired volatility tests
     concat_df = pd.read_csv(routine_csv)
     gasoline_df = concat_df[concat_df.Prod == 'Gasoline']
+    #print(gasoline_df.head())
     gasoline_df.DateSampled = pd.to_datetime(gasoline_df.DateSampled)
     gasoline_date_index_df = gasoline_df.set_index(gasoline_df.DateSampled)
-    volitility_df = gasoline_date_index_df[(gasoline_date_index_df.Test == 'Distillation 50%') | (gasoline_date_index_df.Test == 'Vapor Pressure') | (gasoline_date_index_df.Test == 'Vapor-Liquid Ratio')]
-    volitility_df['datesampled_month'] = volitility_df['DateSampled'].dt.month
-    volitility_df['datesampled_day'] = volitility_df['DateSampled'].dt.day
-    volitility_df['datesampled_month_day'] = volitility_df['datesampled_month'].astype('str') + '/' + volitility_df['datesampled_day'].astype('str')
-    volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
-
+    #
+    gasoline_date_index_df[(gasoline_date_index_df.Test == 'Distillation 50%') | (gasoline_date_index_df.Test == 'Vapor Pressure') | (gasoline_date_index_df.Test == 'Vapor-Liquid Ratio')]
+    #print(gasoline_date_index_df.head())
+    full_volitility_df = gasoline_date_index_df.copy()
+    print(full_volitility_df.head())
+    full_volitility_df['datesampled_month'] = full_volitility_df['DateSampled'].dt.month
+    full_volitility_df['datesampled_day'] = full_volitility_df['DateSampled'].dt.day
+    full_volitility_df['datesampled_month_day'] = full_volitility_df['datesampled_month'].astype('str') + '/' + full_volitility_df['datesampled_day'].astype('str')
+    full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
+    (full_volatility_df.head())
     # Reads in the ASTM data which was transfered from the standard to an Excel file
     ASTM_df = pd.read_csv('../../data/01_raw/ASTM_fuel.csv')
     ASTM_df = ASTM_df.set_index(ASTM_df.Date)
     # Merge the two together
-    new_volitility_df = volitility_df.merge(ASTM_df, how='left', on='Date')
+    new_volitility_df = full_volitility_df.merge(ASTM_df, how='left', on='Date')
 
     # Save to csv
     # volitility_df.to_csv('../../data/03_processed/volatility_gas_ASTM_function.csv')
