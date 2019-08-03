@@ -37,7 +37,7 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
 
 
 def date_results_df_creator(df, test_name):
-    """Takes in the file path of the large combined gasoline and ASTM standards dataframe. It makes the dateStamp in datetime form and on the index. Also takes the test of the specific test to be made into a df
+    """Takes in the file path of the large combined gasoline and ASTM standards dataframe. It makes the dateStamp in datetime form and on the index. Also takes the test of the specific test to be made into a df. It also takes the test specific limits to eliminate any outliers most likely caused by data entry errors.
 
         Keyword arguments:
         df -- the string of where the combined df is stored
@@ -50,11 +50,59 @@ def date_results_df_creator(df, test_name):
     volatility_results_df = volatility_df[['Test','Result']]
     volatility_results_df['Result'] = volatility_results_df.Result.replace('  ', np.nan)
     volatility_results_df['temp'] = volatility_results_df.Result.astype('float')
-    volatility_results_df.drop('Result', axis=1, inplace=True)
+    volatility_results_df.drop('Result', axis=1, inplace = True)
     volatility_results_floats_df = volatility_results_df.dropna()
 
     test_df = volatility_results_floats_df[volatility_results_floats_df.Test == test_name]
-    test_df.rename(columns={"temp": "Result_deg_C"}, inplace =True)
+    test_df.rename(columns={"temp": "Result_deg_C"}, inplace = True)
     testing_df = test_df.drop(columns=['Test'])
 
+    if test_name == 'Distillation 50%':
+        testing_df = testing_df[testing_df.Result_deg_C <= 225]
+    elif test_name == 'Vapor-Liquid Ratio':
+        testing_df = testing_df[(testing_df.Result_deg_C < 150) & (testing_df.Result_deg_C > 30)]
+    elif test_name == 'Vapor Pressure':
+        testing_df = testing_df[testing_df.Result_deg_C < 175]
+    else:
+        print('not a valid volaitlity test name')
+
     return testing_df
+
+def stationarity_check(TS, title):
+    """Takes in a data frame and a title for a graph. The function will tell the user if the time series is stationary with the Dicky-Fuller test. It gives the F-score and critical values.
+
+        Keyword arguments:
+        TS -- a dataframe where the index is Timeseries and there is only one more numerical column besides the index
+        title -- a string of what the title of the graph should be
+    """
+
+    # Import adfuller
+    from statsmodels.tsa.stattools import adfuller
+
+    # Calculate rolling statistics
+    rolmean = TS.rolling(window = 8, center = False).mean()
+    rolstd = TS.rolling(window = 8, center = False).std()
+
+    # Perform the Dickey Fuller Test
+    dftest = adfuller(TS['Result_deg_C']) # change the passengers column as required
+
+    #Plot rolling statistics:
+    fig = plt.figure(figsize=(12,6))
+    orig = plt.plot(TS, color='blue',label='Original')
+    mean = plt.plot(rolmean, color='red', label='Rolling Mean')
+    std = plt.plot(rolstd, color='black', label = 'Rolling Std')
+    plt.legend(loc='best')
+    plt.title(title)
+    plt.savefig(f'../../results/Images/{title}.png')
+    plt.show(block=False)
+
+
+    # Print Dickey-Fuller test results
+    print ('Results of Dickey-Fuller Test:')
+
+    dfoutput = pd.Series(dftest[0:4], index=['Test Statistic','p-value','#Lags Used','Number of Observations Used'])
+    for key,value in dftest[4].items():
+        dfoutput['Critical Value (%s)'%key] = value
+    print (dfoutput)
+
+    return None
