@@ -23,8 +23,8 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     print(full_volitility_df.head())
     full_volitility_df['datesampled_month'] = full_volitility_df['DateSampled'].dt.month
     full_volitility_df['datesampled_day'] = full_volitility_df['DateSampled'].dt.day
-    full_volitility_df['datesampled_month_day'] = full_volitility_df['datesampled_month'].astype('str') + '/' + full_volitility_df['datesampled_day'].astype('str')
-    #full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
+    full_volitility_df['datesampled_month_day']=full_volitility_df['datesampled_month'].astype('str')+'/'+full_volitility_df['datesampled_day'].astype('str')
+    full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
     print(full_volitility_df.head())
     #(full_volatility_df.head())
     # Reads in the ASTM data which was transfered from the standard to an Excel file
