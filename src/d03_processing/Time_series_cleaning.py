@@ -1,5 +1,6 @@
 import pandas as pd
 from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import adfuller
 
 def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     """Takes in the original csvs including the path names as strings for the results and ASTM standards. Saves the final df as volatility_gas_ASTM.csv in the processed data folder.
@@ -23,8 +24,9 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     full_volitility_df['datesampled_month'] = full_volitility_df['DateSampled'].dt.month
     full_volitility_df['datesampled_day'] = full_volitility_df['DateSampled'].dt.day
     full_volitility_df['datesampled_month_day'] = full_volitility_df['datesampled_month'].astype('str') + '/' + full_volitility_df['datesampled_day'].astype('str')
-    full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
-    (full_volatility_df.head())
+    #full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
+    print(full_volitility_df.head())
+    #(full_volatility_df.head())
     # Reads in the ASTM data which was transfered from the standard to an Excel file
     ASTM_df = pd.read_csv('../../data/01_raw/ASTM_fuel.csv')
     ASTM_df = ASTM_df.set_index(ASTM_df.Date)
@@ -77,9 +79,6 @@ def stationarity_check(TS, title):
         title -- a string of what the title of the graph should be
     """
 
-    # Import adfuller
-    from statsmodels.tsa.stattools import adfuller
-
     # Calculate rolling statistics
     rolmean = TS.rolling(window = 8, center = False).mean()
     rolstd = TS.rolling(window = 8, center = False).std()
@@ -118,7 +117,7 @@ def seasonal_decomp_graphs(df, title):
 
     # Gather the trend, seasonality and noise of decomposed object
 
-    decomposition = seasonal_decompose(df)
+    decomposition = seasonal_decompose(df, title)
     trend = decomposition.trend
     seasonal = decomposition.seasonal
     residual = decomposition.resid
@@ -142,5 +141,4 @@ def seasonal_decomp_graphs(df, title):
     plt.plot(residual, label='Residuals', color="blue")
     plt.legend(loc='best')
 
-    plt.savefig(f'../../results/Images/seasonal_decomposition.png')
     plt.tight_layout()
