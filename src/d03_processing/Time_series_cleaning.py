@@ -1,4 +1,5 @@
 import pandas as pd
+from statsmodels.tsa.seasonal import seasonal_decompose
 
 def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     """Takes in the original csvs including the path names as strings for the results and ASTM standards. Saves the final df as volatility_gas_ASTM.csv in the processed data folder.
@@ -106,3 +107,40 @@ def stationarity_check(TS, title):
     print (dfoutput)
 
     return None
+
+def seasonal_decomp_graphs(df, title):
+    """Takes in a data frame and a title for a graph. The function will give a graph of the time series and decompose it into its trend, seasonality, and noise. Then graph all 4 components
+
+        Keyword arguments:
+        df -- a dataframe where the index is Timeseries and there is only one more numerical column besides the index. It must have a frequency specified and have no empty or null values. Upsample or downsample to fill in empty date values.
+        title -- a string of what the title of the graph should be
+    """
+
+    # Gather the trend, seasonality and noise of decomposed object
+
+    decomposition = seasonal_decompose(df)
+    trend = decomposition.trend
+    seasonal = decomposition.seasonal
+    residual = decomposition.resid
+
+    # Plot gathered statistics
+    plt.figure(figsize=(12,8))
+    plt.subplot(411)
+    plt.title(title)
+    plt.plot(Vapor_Pressure.groupby('DateSampled').max() , label='Original', color="blue")
+    plt.legend(loc='best')
+
+    plt.subplot(412)
+    plt.plot(trend, label='Trend', color="blue")
+    plt.legend(loc='best')
+
+    plt.subplot(413)
+    plt.plot(seasonal,label='Seasonality', color="blue")
+    plt.legend(loc='best')
+
+    plt.subplot(414)
+    plt.plot(residual, label='Residuals', color="blue")
+    plt.legend(loc='best')
+
+    plt.savefig(f'../../results/Images/seasonal_decomposition.png')
+    plt.tight_layout()
