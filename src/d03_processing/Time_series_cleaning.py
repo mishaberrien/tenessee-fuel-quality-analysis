@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
 
@@ -47,11 +48,14 @@ def date_results_df_creator(df, test_name):
         test_name -- the name of the test results to be tracked by date
     """
 
-    volatility_df = pd.read_csv(df)
+    volatility_df = df.copy()
     volatility_df['DateSampled'] = pd.to_datetime(volatility_df.DateSampled).apply(lambda x: x.date())
     volatility_df = volatility_df.set_index(volatility_df.DateSampled)
     volatility_results_df = volatility_df[['Test','Result']]
     volatility_results_df['Result'] = volatility_results_df.Result.replace('  ', np.nan)
+    volatility_results_df['Result'] = volatility_results_df.Result.replace(' ', np.nan)
+    volatility_results_df['Result'] = volatility_results_df.Result.replace('', np.nan)
+    volatility_results_df = volatility_results_df.dropna()
     volatility_results_df['temp'] = volatility_results_df.Result.astype('float')
     volatility_results_df.drop('Result', axis=1, inplace = True)
     volatility_results_floats_df = volatility_results_df.dropna()
@@ -119,7 +123,7 @@ def seasonal_decomp_graphs(df, title):
     dated_vapor.index = pd.to_datetime(dated_vapor.index, format = '%Y/%m/%d')
     dated_vapor = dated_vapor.asfreq('d')
     resampled_vapor_pessure = dated_vapor.resample(rule = 'B')
-    resampled_vapor_pessure = resampled_vapor_pessure.fillna(method = 'pad')]
+    resampled_vapor_pessure = resampled_vapor_pessure.fillna(method = 'pad')
     resampled_vapor_pessure.dropna(inplace=True)
 
     # Gather the trend, seasonality and noise of decomposed object
