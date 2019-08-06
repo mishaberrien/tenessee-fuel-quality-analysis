@@ -20,23 +20,23 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     gasoline_date_index_df[(gasoline_date_index_df.Test == 'Distillation 50%') | (gasoline_date_index_df.Test == 'Vapor Pressure') | (gasoline_date_index_df.Test == 'Vapor-Liquid Ratio')]
     #print(gasoline_date_index_df.head())
     full_volitility_df = gasoline_date_index_df.copy()
-    print(full_volitility_df.head())
+    #print(full_volitility_df.head())
     full_volitility_df['datesampled_month'] = full_volitility_df['DateSampled'].dt.month
     full_volitility_df['datesampled_day'] = full_volitility_df['DateSampled'].dt.day
     full_volitility_df['datesampled_month_day']=full_volitility_df['datesampled_month'].astype('str')+'/'+full_volitility_df['datesampled_day'].astype('str')
     full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
-    print(full_volitility_df.head())
+    #print(full_volitility_df.head())
     #(full_volatility_df.head())
     # Reads in the ASTM data which was transfered from the standard to an Excel file
     ASTM_df = pd.read_csv('../../data/01_raw/ASTM_fuel.csv')
-    ASTM_df = ASTM_df.set_index(ASTM_df.Date)
+    #ASTM_df = ASTM_df.set_index(ASTM_df.Date)
     # Merge the two together
     new_volitility_df = full_volitility_df.merge(ASTM_df, how='left', on='Date')
 
     # Save to csv
     # volitility_df.to_csv('../../data/03_processed/volatility_gas_ASTM_function.csv')
 
-    return new_volatility_df
+    return new_volitility_df
 
 
 def date_results_df_creator(df, test_name):
@@ -114,6 +114,13 @@ def seasonal_decomp_graphs(df, title):
         df -- a dataframe where the index is Timeseries and there is only one more numerical column besides the index. It must have a frequency specified and have no empty or null values. Upsample or downsample to fill in empty date values.
         title -- a string of what the title of the graph should be
     """
+    # Get the frequency set up to buisness days
+    dated_vapor = pd.DataFrame(df)
+    dated_vapor.index = pd.to_datetime(dated_vapor.index, format = '%Y/%m/%d')
+    dated_vapor = dated_vapor.asfreq('d')
+    resampled_vapor_pessure = dated_vapor.resample(rule = 'B')
+    resampled_vapor_pessure = resampled_vapor_pessure.fillna(method = 'pad')]
+    resampled_vapor_pessure.dropna(inplace=True)
 
     # Gather the trend, seasonality and noise of decomposed object
 
