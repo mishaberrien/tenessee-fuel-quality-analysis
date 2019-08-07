@@ -26,8 +26,11 @@ def volatilty_ASTM_df_creator(routine_csv, ASTM_csv):
     full_volitility_df['datesampled_day'] = full_volitility_df['DateSampled'].dt.day
     full_volitility_df['datesampled_month_day']=full_volitility_df['datesampled_month'].astype('str')+'/'+full_volitility_df['datesampled_day'].astype('str')
     full_volitility_df.rename(columns={'datesampled_month_day' : 'Date'}, inplace = True)
-    #print(full_volitility_df.head())
-    #(full_volatility_df.head())
+
+    #Clean up the results columns
+    full_volitility_df['Results_cleaned']
+
+
     # Reads in the ASTM data which was transfered from the standard to an Excel file
     ASTM_df = pd.read_csv('../../data/01_raw/ASTM_fuel.csv')
     #ASTM_df = ASTM_df.set_index(ASTM_df.Date)
@@ -128,7 +131,7 @@ def seasonal_decomp_graphs(df, title):
 
     # Gather the trend, seasonality and noise of decomposed object
 
-    decomposition = seasonal_decompose(df, title)
+    decomposition = seasonal_decompose(df, freq = 260)
     trend = decomposition.trend
     seasonal = decomposition.seasonal
     residual = decomposition.resid
