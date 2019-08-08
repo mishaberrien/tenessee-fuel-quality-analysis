@@ -43,6 +43,6 @@ Although around 97% of the tests pass these compliance tests, each year around 3
 * [Executive Summary Slidedeck](link)
 * [Technical Notebook](link)
 
-======
+---
 
 This template is based on the [DSSG machine learning pipeline](https://github.com/dssg/hitchhikers-guide/tree/master/sources/curriculum/0_before_you_start/pipelines-and-project-workflow).
