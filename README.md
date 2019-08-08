@@ -39,7 +39,7 @@ Although around 97% of the tests pass these compliance tests, each year around 3
 **NOTE**: We have included only a sample of our dataset (results data from 2016) and the ASTM set.  
 
 
-## Featured Notebooks/Analysis/Deliverables
+## Featured Notebooks/Slide Decks
 * [Executive Summary Slidedeck](link)
 * [Technical Notebook](link)
 
