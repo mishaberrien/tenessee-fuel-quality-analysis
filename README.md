@@ -20,7 +20,8 @@ The purpose of this project is to understand if we can use data collected by Ten
 
 ### Technologies
 * Python
-* Pandas, jupyter
+* Pandas
+* jupyter
 
 ## Project Description
 In this project, we are interested in understanding if we can predict when a fuel compliance test will fail.
