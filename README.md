@@ -31,7 +31,7 @@ Although around 97% of the tests pass these compliance tests, each year around 3
 
 ## Getting Started
 
-1. Clone this repo
+1. Clone repo https://github.com/99KHayes/tenessee-fuel-quality-analysis.git
 2. Raw Data is being kept in the data/01_raw folder within this repo.
 3. The final results technical notebook can be found [here](https://mishaberrien.com/tenessee-fuel-quality-analysis/). The notebook is located in the results folder.
 4. If you would like to run the code please run the jupyter notebook found in the results folder.
