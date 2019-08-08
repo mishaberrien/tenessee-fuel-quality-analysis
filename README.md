@@ -9,7 +9,7 @@ The purpose of this project is to understand if we can use data collected by Ten
 |Name     |  Github Page   |  Personal Website  |
 |---------|-----------------|--------------------|
 |Misha Berrien | [mishaberrien](https://github.com/mishaberrien)| [www.mishaberrien.com](https://mishaberrien.com/)  |
-|Kate Hayes| [99Hayes](https://github.com/99KHayes) | --- |
+|Kate Hayes| [99Hayes](https://github.com/99KHayes) | - |
 
 ### Methods Used
 * Inferential Statistics
