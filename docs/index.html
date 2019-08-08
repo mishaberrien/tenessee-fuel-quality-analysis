@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>20190808-Results-DRAFT</title>
+<title>IGNORE-THIS</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13129,64 +13129,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Dataset" data-toc-modified-id="Dataset-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Dataset</a></span></li><li><span><a href="#Key-Metrics" data-toc-modified-id="Key-Metrics-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Key Metrics</a></span></li><li><span><a href="#Questions" data-toc-modified-id="Questions-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Questions</a></span></li><li><span><a href="#Time-Series-Analysis" data-toc-modified-id="Time-Series-Analysis-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Time Series Analysis</a></span><ul class="toc-item"><li><span><a href="#Load-and-Process-Datasets" data-toc-modified-id="Load-and-Process-Datasets-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Load and Process Datasets</a></span></li><li><span><a href="#Dicky-Fuller-Stationality-Tests" data-toc-modified-id="Dicky-Fuller-Stationality-Tests-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Dicky-Fuller Stationality Tests</a></span></li><li><span><a href="#Time-Series-Decomposition" data-toc-modified-id="Time-Series-Decomposition-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Time Series Decomposition</a></span></li></ul></li><li><span><a href="#Logistic-Regression-Analysis" data-toc-modified-id="Logistic-Regression-Analysis-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Logistic Regression Analysis</a></span><ul class="toc-item"><li><span><a href="#Load-and-Process-Datasets" data-toc-modified-id="Load-and-Process-Datasets-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Load and Process Datasets</a></span></li><li><span><a href="#Visualize-Final-Dataset" data-toc-modified-id="Visualize-Final-Dataset-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>Visualize Final Dataset</a></span></li><li><span><a href="#Build-&amp;-Choose-Model" data-toc-modified-id="Build-&amp;-Choose-Model-6.3"><span class="toc-item-num">6.3&nbsp;&nbsp;</span>Build &amp; Choose Model</a></span><ul class="toc-item"><li><span><a href="#Model-1:-Vapor-Liquid-Ratio-Test-Outcome-~-Grade" data-toc-modified-id="Model-1:-Vapor-Liquid-Ratio-Test-Outcome-~-Grade-6.3.1"><span class="toc-item-num">6.3.1&nbsp;&nbsp;</span>Model 1: Vapor Liquid-Ratio Test Outcome ~ Grade</a></span><ul class="toc-item"><li><span><a href="#Oversampling" data-toc-modified-id="Oversampling-6.3.1.1"><span class="toc-item-num">6.3.1.1&nbsp;&nbsp;</span>Oversampling</a></span></li><li><span><a href="#Testing-Model-1" data-toc-modified-id="Testing-Model-1-6.3.1.2"><span class="toc-item-num">6.3.1.2&nbsp;&nbsp;</span>Testing Model 1</a></span></li></ul></li><li><span><a href="#Model-2:-Vapor-Liquid-Ratio-Test-Outcome-~-Tennessee-Retailers-Season-&amp;-Grade" data-toc-modified-id="Model-2:-Vapor-Liquid-Ratio-Test-Outcome-~-Tennessee-Retailers-Season-&amp;-Grade-6.3.2"><span class="toc-item-num">6.3.2&nbsp;&nbsp;</span>Model 2: Vapor Liquid-Ratio Test Outcome ~ Tennessee Retailers Season &amp; Grade</a></span></li></ul></li><li><span><a href="#Further-Testing-of-Chosen-Model" data-toc-modified-id="Further-Testing-of-Chosen-Model-6.4"><span class="toc-item-num">6.4&nbsp;&nbsp;</span>Further Testing of Chosen Model</a></span><ul class="toc-item"><li><span><a href="#Precision,-Recall-and-F1-Score" data-toc-modified-id="Precision,-Recall-and-F1-Score-6.4.1"><span class="toc-item-num">6.4.1&nbsp;&nbsp;</span>Precision, Recall and F1-Score</a></span></li><li><span><a href="#ROC-Curve-&amp;-AUC" data-toc-modified-id="ROC-Curve-&amp;-AUC-6.4.2"><span class="toc-item-num">6.4.2&nbsp;&nbsp;</span>ROC Curve &amp; AUC</a></span></li></ul></li><li><span><a href="#Summary-&amp;-Caveats" data-toc-modified-id="Summary-&amp;-Caveats-6.5"><span class="toc-item-num">6.5&nbsp;&nbsp;</span>Summary &amp; Caveats</a></span><ul class="toc-item"><li><span><a href="#Logistic-Regression-Analysis" data-toc-modified-id="Logistic-Regression-Analysis-6.5.1"><span class="toc-item-num">6.5.1&nbsp;&nbsp;</span>Logistic Regression Analysis</a></span></li></ul></li></ul></li><li><span><a href="#Conclusion-&amp;-Next-Steps" data-toc-modified-id="Conclusion-&amp;-Next-Steps-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusion &amp; Next Steps</a></span><ul class="toc-item"><li><span><a href="#Time-Series-Analysis" data-toc-modified-id="Time-Series-Analysis-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Time Series Analysis</a></span><ul class="toc-item"><li><span><a href="#Conclusion" data-toc-modified-id="Conclusion-7.1.1"><span class="toc-item-num">7.1.1&nbsp;&nbsp;</span>Conclusion</a></span></li><li><span><a href="#Next-Steps" data-toc-modified-id="Next-Steps-7.1.2"><span class="toc-item-num">7.1.2&nbsp;&nbsp;</span>Next Steps</a></span></li></ul></li><li><span><a href="#Logistic-Regression" data-toc-modified-id="Logistic-Regression-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Logistic Regression</a></span><ul class="toc-item"><li><span><a href="#Conclusion" data-toc-modified-id="Conclusion-7.2.1"><span class="toc-item-num">7.2.1&nbsp;&nbsp;</span>Conclusion</a></span></li><li><span><a href="#Next-Steps" data-toc-modified-id="Next-Steps-7.2.2"><span class="toc-item-num">7.2.2&nbsp;&nbsp;</span>Next Steps</a></span></li></ul></li></ul></li></ul></div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stat</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">sklearn.preprocessing</span> <span class="k">as</span> <span class="nn">preprocessing</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="k">import</span> <span class="n">SMOTE</span><span class="p">,</span> <span class="n">ADASYN</span>
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">f1_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">roc_curve</span><span class="p">,</span> <span class="n">auc</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">precision_recall_curve</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
-<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="k">import</span> <span class="n">SMOTE</span><span class="p">,</span> <span class="n">ADASYN</span>
-
-
-<span class="n">src_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">src_dir</span><span class="p">)</span>
-
-<span class="c1"># helper functions</span>
-<span class="kn">from</span> <span class="nn">d01_data.intermediate_cleaning</span> <span class="k">import</span> <span class="n">concatenate_and_save_intermediate_files</span><span class="p">,</span> <span class="n">clean_dataset_intermediate_1</span><span class="p">,</span> <span class="n">clean_dataset_intermediate_2</span>
-<span class="kn">from</span> <span class="nn">d03_processing.feature_engineering</span> <span class="k">import</span> <span class="n">merge_gasoline_asm_datasets</span>
-<span class="kn">from</span> <span class="nn">d04_modelling.modelling</span> <span class="k">import</span> <span class="n">get_model_pvalue</span>
-<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">date_results_df_creator</span>
-<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">volatilty_ASTM_df_creator</span>
-<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">stationarity_check</span>
-<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">seasonal_decomp_graphs</span>
-
-<span class="c1"># Load the &quot;autoreload&quot; extension</span>
-<span class="o">%</span><span class="k">load_ext</span> autoreload
-
-<span class="c1"># reload modules so that as you change code in src, it gets loaded</span>
-<span class="o">%</span><span class="k">autoreload</span>
-
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In this project, we are interested in understanding if we can predict when a fuel compliance test will fail.</p>
 <p>The state of Tennessee's Department of Agriculture (TDA) maintaines a fuel quality inspection program. Each year, the state inspects all places where fuel is sold/ distributed including gas stations, terminals and airports. The results of these routine tests as well as follow up tests for complaints are maintained by the Tennessee Department of Agriculture.</p>
 <p>Although around 97% of the tests pass these compliance tests, each year around 3% of the tests fail. A failing test could mean that consumers are exposed to fuel that could do harm to their property or themselves.</p>
@@ -13262,221 +13204,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Time-Series-Analysis">Time Series Analysis<a class="anchor-link" href="#Time-Series-Analysis">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Load-and-Process-Datasets">Load and Process Datasets<a class="anchor-link" href="#Load-and-Process-Datasets">&#182;</a></h3><p>The fuel volatility specifications change throughout the year based on outdoor temperature. Therse specifications are set by the ASTM. The ASTM standards were joined onto the five year result data frame. in order to assess the seasonality of the data. A Dicky Fuller test and selective seaonal decomposition was done.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># volatility_and_astm_df = volatilty_ASTM_df_creator(&#39;../../data/02_intermediate/routine_clean3.csv&#39;, &#39;../../data/01_raw/ASTM_fuel.csv&#39;)</span>
-<span class="c1"># volatility_and_astm_df.head()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># distillaltion_df = date_results_df_creator(volatility_and_astm_df, &#39;Distillation 50%&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># vapor_pressure_df = date_results_df_creator(volatility_and_astm_df, &#39;Vapor Pressure&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># vapor_liquid_df = date_results_df_creator(volatility_and_astm_df, &#39;Vapor-Liquid Ratio&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dicky-Fuller-Stationality-Tests">Dicky-Fuller Stationality Tests<a class="anchor-link" href="#Dicky-Fuller-Stationality-Tests">&#182;</a></h3><p>Once the proper dataframes were created a Dicky Fuller Test was added to assess for stationarity. All of the tests were stationary above a 1% critical value. Two failed at 1% but that was due to extreme sample failures. The average, maximum, and minimum values for each day were taken becasue there was more than one value for each date and time series analysis requires there to be no more than one value for each date. Assessing at these points allowed differing seasonal trends to be seen and the outliers on either side of the spectrum to become more obvious. It is not the most informative thing to say that the value of one sample in Knoxville averaged with another in Nashville can tell the user anything about the trends. It can disguies a lot of the analysis</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Distillation_50.groupby(&#39;DateSampled&#39;).mean(), &#39;Distillation 50 % Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Vapor_Liquid.groupby(&#39;DateSampled&#39;).mean(), &#39;Vapor Liquid Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Vapor_Pressure.groupby(&#39;DateSampled&#39;).mean(), &#39;Vapor Pressure Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Distillation_50.groupby(&#39;DateSampled&#39;).max(), &#39;Distillation 50 % Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Vapor_Liquid.groupby(&#39;DateSampled&#39;).max(), &#39;Vapor Liquid Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Vapor_Pressure.groupby(&#39;DateSampled&#39;).mean(), &#39;Vapor Pressure Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Distillation_50.groupby(&#39;DateSampled&#39;).min(), &#39;Distillation 50 % Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Vapor_Liquid.groupby(&#39;DateSampled&#39;).min(), &#39;Vapor Liquid Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># stationarity_check(Vapor_Pressure.groupby(&#39;DateSampled&#39;).min(), &#39;Vapor Pressure Mean&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Time-Series-Decomposition">Time Series Decomposition<a class="anchor-link" href="#Time-Series-Decomposition">&#182;</a></h3><p>A time series decomposition on the average vapor pressure was done. This was selected to do the decomposition becasue it had an easy to see trend of seasonality with few outliers.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make A resampled vapor pressure data frame that has frequency by buisness days and the missing dates are filled using the .pad method</span>
-<span class="c1"># seasonal_decompose(Vapor_Pressure.groupby(&#39;DateSampled&#39;).max(), &#39;Average Vapor Pressue Seasonal Decomposition&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Logistic-Regression-Analysis">Logistic Regression Analysis<a class="anchor-link" href="#Logistic-Regression-Analysis">&#182;</a></h2><p>The original dataset contains information tests for a number of different fuels (jet fuel, diesel, gasoline, etc.). For this project, we are only interested in making predictions about consumer facing gas-stations, so we have restricted our dataset to gasoline products. Below we load and clean our dataset as well as build and evaluate our model.</p>
 
 </div>
@@ -13493,7 +13220,57 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stat</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">sklearn.preprocessing</span> <span class="k">as</span> <span class="nn">preprocessing</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="k">import</span> <span class="n">SMOTE</span><span class="p">,</span> <span class="n">ADASYN</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">roc_curve</span><span class="p">,</span> <span class="n">auc</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">precision_recall_curve</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="k">import</span> <span class="n">SMOTE</span><span class="p">,</span> <span class="n">ADASYN</span>
+
+
+<span class="n">src_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">src_dir</span><span class="p">)</span>
+
+<span class="c1"># helper functions</span>
+<span class="kn">from</span> <span class="nn">d01_data.intermediate_cleaning</span> <span class="k">import</span> <span class="n">concatenate_and_save_intermediate_files</span><span class="p">,</span> <span class="n">clean_dataset_intermediate_1</span><span class="p">,</span> <span class="n">clean_dataset_intermediate_2</span>
+<span class="kn">from</span> <span class="nn">d03_processing.feature_engineering</span> <span class="k">import</span> <span class="n">merge_gasoline_asm_datasets</span>
+<span class="kn">from</span> <span class="nn">d04_modelling.modelling</span> <span class="k">import</span> <span class="n">get_model_pvalue</span>
+<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">date_results_df_creator</span>
+<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">volatilty_ASTM_df_creator</span>
+<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">stationarity_check</span>
+<span class="kn">from</span> <span class="nn">d03_processing.Time_series_cleaning</span> <span class="k">import</span> <span class="n">seasonal_decomp_graphs</span>
+
+<span class="c1"># Load the &quot;autoreload&quot; extension</span>
+<span class="o">%</span><span class="k">load_ext</span> autoreload
+
+<span class="c1"># reload modules so that as you change code in src, it gets loaded</span>
+<span class="o">%</span><span class="k">autoreload</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># gasoline_proc = pd.read_csv(&#39;../../data/03_processed/gasoline_processed.csv&#39;)</span>
@@ -13512,7 +13289,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">concatenate_and_save_intermediate_files</span><span class="p">(</span><span class="s1">&#39;fy_*_routine&#39;</span><span class="p">,</span> <span class="s1">&#39;routine_full&#39;</span><span class="p">)</span>
@@ -13548,7 +13325,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">routine_full</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/02_intermediate/routine_full.csv&#39;</span><span class="p">)</span>
@@ -13580,7 +13357,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">routine_clean</span> <span class="o">=</span> <span class="n">clean_dataset_intermediate_1</span><span class="p">(</span><span class="n">routine_full</span><span class="p">)</span>
@@ -13593,7 +13370,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gasoline_clean</span> <span class="o">=</span> <span class="n">clean_dataset_intermediate_2</span><span class="p">(</span><span class="n">routine_clean</span><span class="p">)</span>
@@ -13633,7 +13410,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gasoline</span> <span class="o">=</span> <span class="n">merge_gasoline_asm_datasets</span><span class="p">(</span><span class="n">gasoline_clean</span><span class="p">,</span> <span class="n">astm</span><span class="p">)</span>
@@ -13654,7 +13431,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gasoline</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -13670,7 +13447,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13811,7 +13588,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gasoline</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -13892,7 +13669,7 @@ memory usage: 3.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gasoline</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13905,7 +13682,7 @@ memory usage: 3.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gasoline</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -13921,7 +13698,7 @@ memory usage: 3.8+ MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -14114,7 +13891,7 @@ memory usage: 3.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># construct features </span>
@@ -14132,7 +13909,7 @@ memory usage: 3.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
@@ -14145,7 +13922,7 @@ memory usage: 3.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Original Count:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -14198,7 +13975,7 @@ Label Count &#39;0&#39;: 9055
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">smote</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">()</span>
@@ -14214,7 +13991,7 @@ Label Count &#39;0&#39;: 9055
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Updated w. Smote:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -14259,7 +14036,7 @@ Label Count &#39;0&#39;: 9055
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">logreg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">fit_intercept</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="mf">1e12</span><span class="p">)</span>
@@ -14289,7 +14066,7 @@ Label Count &#39;0&#39;: 9055
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14325,7 +14102,7 @@ Label Count &#39;0&#39;: 9055
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred_test</span> <span class="o">=</span> <span class="n">logreg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14339,7 +14116,7 @@ Label Count &#39;0&#39;: 9055
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Training Accuracy: &#39;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train</span><span class="p">))</span>
@@ -14395,7 +14172,7 @@ Testing Accuracy:  0.5278705368610326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># construct features </span>
@@ -14413,7 +14190,7 @@ Testing Accuracy:  0.5278705368610326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
@@ -14427,7 +14204,7 @@ Testing Accuracy:  0.5278705368610326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">smote</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">()</span>
@@ -14443,7 +14220,7 @@ Testing Accuracy:  0.5278705368610326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">logreg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">fit_intercept</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="mf">1e12</span><span class="p">)</span>
@@ -14473,7 +14250,7 @@ Testing Accuracy:  0.5278705368610326
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14494,7 +14271,7 @@ Testing Accuracy:  0.5278705368610326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred_test</span> <span class="o">=</span> <span class="n">logreg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14508,7 +14285,7 @@ Testing Accuracy:  0.5278705368610326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Training Accuracy: &#39;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train</span><span class="p">))</span>
@@ -14571,7 +14348,7 @@ Testing Accuracy:  0.6943231441048034
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Training Precision: &#39;</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train</span><span class="p">))</span>
@@ -14629,7 +14406,7 @@ Testing F1-Score:  0.01652892561983471
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#First calculate the probability scores of each of the datapoints:</span>
@@ -14664,7 +14441,7 @@ Testing F1-Score:  0.01652892561983471
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;axes.facecolor&quot;</span><span class="p">:</span> <span class="s2">&quot;.9&quot;</span><span class="p">})</span>
@@ -14699,7 +14476,7 @@ Testing F1-Score:  0.01652892561983471
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>AUC: 0.8535899957847407
+<pre>AUC: 0.8535899957847408
 </pre>
 </div>
 </div>
@@ -14733,7 +14510,7 @@ Testing F1-Score:  0.01652892561983471
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_test</span><span class="p">),</span> 
@@ -14752,7 +14529,7 @@ Testing F1-Score:  0.01652892561983471
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -14803,7 +14580,7 @@ Testing F1-Score:  0.01652892561983471
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tp</span> <span class="o">=</span> <span class="n">conf_matrix</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;actual 0&#39;</span><span class="p">,</span> <span class="s1">&#39;predicted 0&#39;</span><span class="p">]</span>
@@ -14827,7 +14604,7 @@ $$FPR = \frac{FP}{FP + TN}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;False Positive Rate: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">fp</span><span class="o">/</span><span class="p">(</span><span class="n">fp</span><span class="o">+</span><span class="n">tn</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
@@ -14873,7 +14650,7 @@ $$𝑇𝑃𝑅 = \frac{𝑇𝑃}{𝑇𝑃 + 𝐹𝑁}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;True Positive Rate: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">tp</span><span class="o">/</span><span class="p">(</span><span class="n">tp</span><span class="o">+</span><span class="n">fn</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
@@ -14937,44 +14714,6 @@ $$𝑇𝑃𝑅 = \frac{𝑇𝑃}{𝑇𝑃 + 𝐹𝑁}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conclusion-&amp;-Next-Steps">Conclusion &amp; Next Steps<a class="anchor-link" href="#Conclusion-&amp;-Next-Steps">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Time-Series-Analysis">Time Series Analysis<a class="anchor-link" href="#Time-Series-Analysis">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>There is obvious seasonal trends due to the nature of the regulations.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
 </div>
 </div>
 </div>
