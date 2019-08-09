@@ -1,7 +1,5 @@
 # Tennessee Fuel Quality Analysis
 
-MISHA IS AWESOME! 
-
 #### -- Project Status: [Active]
 
 ## Project Intro/Objective
