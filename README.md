@@ -41,8 +41,8 @@ Although around 97% of the tests pass these compliance tests, each year around 3
 
 
 ## Featured Notebooks/Slide Decks
-* [Executive Summary Slidedeck](link)
-* [Technical Notebook](link)
+* [Executive Summary Slidedeck](https://github.com/mishaberrien/tennessee-fuel-quality-analysis/blob/master/results/Presentation%20-%20Fuel%20Quality%20Analysis.pdf)
+* [Technical Notebook](https://nbviewer.jupyter.org/github/mishaberrien/tennessee-fuel-quality-analysis/blob/master/docs/final-results-technical-notebook.ipynb#)
 
 ---
 
